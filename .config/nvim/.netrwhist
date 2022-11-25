@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =4
+let g:netrw_dirhist_4='/mnt/c/Users/infoh'
+let g:netrw_dirhist_3='/mnt/c/Users/infoh/.vim'
+let g:netrw_dirhist_2='/mnt/c/Users/infoh'
+let g:netrw_dirhist_1='/mnt/c/Users/infoh/AppData'
+let g:netrw_dirhist_0='/mnt/c/Users/infoh/AppData/Local'
+let g:netrw_dirhist_9='/mnt/c/Users/infoh/AppData/Local/Application Data'
+let g:netrw_dirhist_8='/mnt/c/Users/infoh/AppData/Local'
+let g:netrw_dirhist_7='/mnt/c/Users/infoh/AppData/Local/nvim'
+let g:netrw_dirhist_6='/home/infoh/.config/nvim'
+let g:netrw_dirhist_5='/home/infoh/.config'

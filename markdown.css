@@ -1,0 +1,30 @@
+#page-ctn {
+	max-width: 100%;
+}
+.markdown-body {
+	max-width: 100%;
+	background: #fff;
+	padding: 34px;
+}
+
+p {
+	font-size: 20px;
+	line-height: 1.4em;
+	font-family: sans-serif;
+}
+strong {
+	color:blue;
+}
+
+em {
+	color:red;
+	font-weight:bold;
+	text-decoration:none;
+}
+
+img {
+	display: block;
+	float:left;
+	margin: 20px;
+	width: 30%;
+}
