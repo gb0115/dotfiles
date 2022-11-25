@@ -1,0 +1,14 @@
+"Sync directory Netrw(:Ex) and Vim (:cd, :pwd)
+"set autochdir
+set runtimepath^=/home/infoh/.vim runtimepath+=/home/infoh/.vim/after
+let &packpath = &runtimepath
+source /home/infoh/.vimrc
+"open terminal like VScode with T key
+command! -nargs=* T split | wincmd j |resize 8| terminal <args>
+autocmd TermOpen * startinsert
+"colorscheme dracula
+set background=light
+colorscheme PaperColor
+let g:mkdp_markdown_css='/home/infoh/markdown.css'
+let g:mkdp_theme='light'
+
