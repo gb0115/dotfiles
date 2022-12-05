@@ -99,11 +99,15 @@ fi
 #fi
 
 #myconfig_220817
+alias vi='nvim'
+alias vim='nvim'
 alias ls='ls -ta'
 alias Documents='cd /mnt/c/Users/infoh/Documents'
 alias winhome='cd /mnt/c/Users/infoh'
-export PS1="\e[1;34m\u\e[1;35m@\e[1;31m\w\e[m$ " 
+export PS1="\e[1;34m\u\e[1;35m@\e[1;31m\w\e[0m$ " 
 
+#myconfig_221115
 export LS_OPTIONS='-a --color=auto'
 eval "$(dircolors -b)"
 alias ls='ls $LS_OPTIONS'
+
