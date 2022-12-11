@@ -107,6 +107,12 @@ alias winhome='cd /mnt/c/Users/infoh'
 #export PS1="\e[1;34m\u\e[1;35m@\e[1;31m\w\e[0m$ " 
 export PS1="\[\e[1;36m\]\u\[\e[m\]\[\e[1;34m\]@\h\[\e[m\]\[\e[1;35m\]:\w\[\e[m\]\$ "
 
+#mout gdrive in terminal on oldPC
+if [ $HOSTNAME = "DESKTOP-98DKBEG" ]; then
+	sudo mount -t drvfs H: /mnt/h
+	alias gdrive='cd /mnt/h/マイドライブ/'
+fi
+
 #myconfig_221115
 export LS_OPTIONS='-a --color=auto'
 eval "$(dircolors -b)"
