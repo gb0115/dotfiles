@@ -112,13 +112,10 @@ if [ $HOSTNAME = "DESKTOP-98DKBEG" ]; then
 	sudo mount -t drvfs H: /mnt/h
 	alias gdrive='cd /mnt/h/マイドライブ/'
 fi
-if [ $HOSTNAME = "DESKTOP-VGQTB4O" ]; then
-	sudo mount -t drvfs G: /mnt/g
-	alias gdrive='cd /mnt/g/マイドライブ/'
-fi
 
 #myconfig_221115
 export LS_OPTIONS='-a --color=auto'
 eval "$(dircolors -b)"
 alias ls='ls $LS_OPTIONS'
+
 

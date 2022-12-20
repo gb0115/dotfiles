@@ -13,11 +13,8 @@ set encoding=utf-8
 set fileencodings=utf-8
 "shellコマンドの文字化けを防ぐ
 "set termencoding=cp932
-
-
 "Keep the current directory and the browsing directory synced. 
 let g:netrw_keepdir = 0
-
 let g:netrw_liststyle = 2
 " deletes netrw's buffer once it's hidden
 autocmd FileType netrw setl bufhidden=delete
@@ -27,21 +24,15 @@ set path+=** "Search All subdirectories and recursively
 "wildmenu
 set wildmenu
 set wildmode=longest:full,full
-
-
 "clipboard option causes error https://stackoverflow.com/questions/70176024/how-to-efficiently-yank-to-system-clipboard-in-wsl2-neovim
 "set clipboard=unnamedplus
-
 "cuiのnvimで行崩れが起こるのでwindow幅設定
 "set lines=24 columns=84
-
 "cmdlineの高さ
 set cmdheight=2
-
 "tabの数の設定
 set tabstop=4
 set shiftwidth=4
-
 "3行残して改行、1行左に空ける
 set scrolloff=1
 set foldcolumn=1
@@ -51,16 +42,11 @@ set foldcolumn=1
 set scrolljump=4
 set scrolloff=6
 
-
-
 "MAPPING 
 "jj 
 imap jj <Esc>
 "leader key を \ から , へ変える
-let mapleader = ','
-
-
-"Map autocomplete C-x C-f as <tab>
+let mapleader = '\'
 "inoremap <tab> <c-x><c-f>	
 "Map F3 to toggle on and off the line numbers in Normal mode
 nmap <F3> :set nu! <CR>
@@ -70,12 +56,16 @@ nmap <leader><F3> :set rnu! <CR>
 imap <F3> <ESC>:set nu! <CR>i
 "Map F4 to toggle on and off the Relative line numbers in Insert mode
 imap <F4> <ESC>:set rnu! <CR>i
-
 ":term から抜けてウィンドウ移動
 tmap <Esc> <C-\><C-n>
 "if has('nvim')
 "	tnoremap <C-l> <C-\><C-n>
 "endif
+"TODO
+"Map autocomplete C-x C-f as <tab>
+
+
+"COLOR
 
 "その他未分類
 syntax on
@@ -143,8 +133,12 @@ call plug#end()
 "abbr space key to use abbr
 abbr mymail info.hh1216@gmail.com
 "colorscheme dracula
-set background=light
 colorscheme PaperColor
+set background=light
+
+"MARKDOWN
 let g:mkdp_markdown_css='/root/markdown.css'
 let g:mkdp_theme='light'
+let vim_markdown_preview_github=1  
+
 
