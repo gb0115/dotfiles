@@ -1,0 +1,17 @@
+pane	Docker_Wordpress	0	0	:-	0	DESKTOP-98DKBEG	:/mnt/h/マイドライブ/G_Webdev/G_Docker	1	nvim	:nvim Install_Wordpress.md Install_Wordpress2.md Install_Wordpress3.md
+pane	Docker_Wordpress	1	1	:*	0	DESKTOP-98DKBEG	:/home/infoh/my_bashscripts	1	bash	:
+pane	Photoshop	0	1	:*	0	DESKTOP-98DKBEG	:/mnt/h/マイドライブ/G_Painting	1	bash	:
+pane	Shellscript	0	1	:*	0	DESKTOP-98DKBEG	:/mnt/h/マイドライブ	1	bash	:
+pane	Shellscript	0	1	:*	1	DESKTOP-98DKBEG	:/home/infoh/my_bashscripts	0	bash	:
+pane	Shellscript	0	1	:*	2	DESKTOP-98DKBEG	:/home/infoh	0	bash	:
+pane	Surf_Urge	0	1	:*	0	DESKTOP-98DKBEG	:/mnt/h/マイドライブ/G_Scraped_Texts/Willpower	1	bash	:
+pane	Ted_chiang	0	1	:*	0	DESKTOP-98DKBEG	:/mnt/h/マイドライブ/G_Ted_chiang	1	bash	:
+pane	Vim_Hardway	0	1	:*	0	DESKTOP-98DKBEG	:/mnt/h/マイドライブ/G_Scraped_Texts/Vim_docs/Vim_the_Hardway	1	nvim	:nvim Vim_the_Hardway/Vim_hardway_mapping.md Vim_the_Hardway/Vim_hardway_modal_mapping.md
+window	Docker_Wordpress	0	:nvim	0	:-	b33e,134x32,0,0,1	:
+window	Docker_Wordpress	1	:bash	1	:*	b33f,134x32,0,0,2	:
+window	Photoshop	0	:bash	1	:*	b340,134x32,0,0,3	:
+window	Shellscript	0	:bash	1	:*	5b92,134x32,0,0{42x32,0,0,4,91x32,43,0[91x19,43,0,5,91x12,43,20,6]}	:
+window	Surf_Urge	0	:bash	1	:*	b344,134x32,0,0,7	:
+window	Ted_chiang	0	:bash	1	:*	b345,134x32,0,0,8	:
+window	Vim_Hardway	0	:nvim	1	:*	b346,134x32,0,0,9	:
+state	Shellscript	Ted_chiang

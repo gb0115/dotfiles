@@ -1,0 +1,6 @@
+pane	3	0	1	:*	0	DESKTOP-98DKBEG	:/root	1	bash	:
+pane	countdown	0	1	:*	0	DESKTOP-98DKBEG	:/home/infoh/my_bashscripts/countdown	1	nvim	:nvim youtube_timer6_oneliner.sh
+pane	countdown	0	1	:*	1	DESKTOP-98DKBEG	:/home/infoh/my_bashscripts/countdown	0	bash	:
+window	3	0	:bash	1	:*	b344,134x32,0,0,7	:
+window	countdown	0	:nvim	1	:*	74a8,134x32,0,0{92x32,0,0,4,41x32,93,0,5}	:
+state	3	

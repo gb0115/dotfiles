@@ -1,0 +1,10 @@
+pane	4	0	1	:*	0	DESKTOP-98DKBEG	:/mnt/h/マイドライブ/G_Private	1	bash	:
+pane	5	0	1	:*	0	DESKTOP-98DKBEG	:/home/infoh/my_bashscripts	1	bash	:
+pane	6	0	1	:*	0	DESKTOP-98DKBEG	:/home/infoh/my_bashscripts	1	bash	:
+pane	countdown	0	1	:*	0	DESKTOP-98DKBEG	:/home/infoh/my_bashscripts/Document	1	nvim	:nvim youtube_timer6_oneliner.sh
+pane	countdown	0	1	:*	1	DESKTOP-98DKBEG	:/home/infoh/my_bashscripts/countdown	0	bash	:
+window	4	0	:bash	1	:*	b345,134x32,0,0,8	:
+window	5	0	:bash	1	:*	b346,134x32,0,0,9	:
+window	6	0	:bash	1	:*	59cf,134x32,0,0,10	:
+window	countdown	0	:nvim	1	:*	74a8,134x32,0,0{92x32,0,0,4,41x32,93,0,5}	:
+state	countdown	6

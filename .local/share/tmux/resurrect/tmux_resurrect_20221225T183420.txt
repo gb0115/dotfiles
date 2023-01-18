@@ -1,0 +1,8 @@
+pane	20	0	1	:*	0	DESKTOP-98DKBEG	:/mnt/h/マイドライブ/G_Mental/Surf_Urge	1	nvim	:nvim Urge_Surfing.md
+pane	ADHD	0	1	:*	0	DESKTOP-98DKBEG	:/mnt/h/マイドライブ/Journal	1	nvim	:nvim ADHD_Self-Awareness.md
+pane	Wordpress	0	1	:*	0	DESKTOP-98DKBEG	:/mnt/h/マイドライブ/G_Webdev/G_Docker	1	nvim	:nvim Install_Wordpress.md
+pane	Wordpress	0	1	:*	1	DESKTOP-98DKBEG	:/mnt/h/マイドライブ/G_Webdev/G_Docker	0	bash	:
+window	20	0	:nvim	1	:*	b33e,134x32,0,0,1	:
+window	ADHD	0	:nvim	1	:*	b33f,134x32,0,0,2	:
+window	Wordpress	0	:nvim	1	:*	1374,134x32,0,0{76x32,0,0,3,57x32,77,0,4}	:
+state	ADHD	20

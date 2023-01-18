@@ -1,0 +1,6 @@
+pane	9	0	1	:*	0	DESKTOP-98DKBEG	:/mnt/h/マイドライブ/G_Webdev/Documents	1	nvim	:nvim git_merge_230107.md
+pane	countdown	0	1	:*	0	DESKTOP-98DKBEG	:/home/infoh/my_bashscripts/Document	1	nvim	:nvim youtube_timer6_oneliner.sh
+pane	countdown	0	1	:*	1	DESKTOP-98DKBEG	:/home/infoh/my_bashscripts/countdown	0	bash	:
+window	9	0	:nvim	1	:*	ac5e,80x32,0,0,1	:
+window	countdown	0	:nvim	1	:*	749f,134x32,0,0{92x32,0,0,2,41x32,93,0,3}	:
+state	9	countdown

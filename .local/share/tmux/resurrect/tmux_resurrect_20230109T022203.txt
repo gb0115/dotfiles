@@ -1,0 +1,15 @@
+pane	25	0	1	:*	0	DESKTOP-98DKBEG	:/root	1	bash	:
+pane	Dopamine	0	1	:*	0	DESKTOP-98DKBEG	:/mnt/h/マイドライブ/G_Mental/Dopamine	1	nvim	:nvim Dopamine_Project_Sapolsky_230109.md
+pane	bash hardway	0	1	:*	0	DESKTOP-98DKBEG	:/mnt/h/マイドライブ/G_Unix/Vim/Vim_the_Hardway	1	nvim	:nvim Vim_hardway_mapping.md Vim_hardway_modal_mapping.md
+pane	bash hardway	0	1	:*	1	DESKTOP-98DKBEG	:/mnt/h/マイドライブ/G_Unix/Vim/Vim_the_Hardway	0	bash	:
+pane	countdown	0	1	:*Z	0	DESKTOP-98DKBEG	:/home/infoh/my_bashscripts/Document	1	nvim	:nvim youtube_timer6_oneliner.sh
+pane	countdown	0	1	:*Z	1	DESKTOP-98DKBEG	:/mnt/h/マイドライブ	0	bash	:
+pane	pandoc	0	1	:*	0	DESKTOP-98DKBEG	:/mnt/h/マイドライブ/G_Unix/Documents	1	nvim	:nvim pandoc_230109.md
+pane	wordpress	0	1	:*	0	DESKTOP-98DKBEG	:/mnt/h/マイドライブ/G_Webdev/G_Docker	1	nvim	:nvim Install_Wordpress.md Install_Wordpress2.md Install_Wordpress3.md Install_Wordpress_memo.md Learning_Docker221221.md Wordpress_Docker.md
+window	25	0	:[tmux]	1	:*	d9d7,134x32,0,0,28	:
+window	Dopamine	0	:nvim	1	:*	d9d6,134x32,0,0,27	:
+window	bash hardway	0	:nvim	1	:*	8bd1,134x32,0,0{85x32,0,0,23,48x32,86,0,24}	:
+window	countdown	0	:[tmux]	1	:*Z	f49a,134x32,0,0{92x32,0,0,1,41x32,93,0,2}	:
+window	pandoc	0	:[tmux]	1	:*	d9d5,134x32,0,0,26	:
+window	wordpress	0	:nvim	1	:*	d9d4,134x32,0,0,25	:
+state	25	

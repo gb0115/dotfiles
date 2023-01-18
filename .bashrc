@@ -78,7 +78,7 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # some more ls aliases
-alias ll='ls -alF'
+alias ll='ls -alFt'
 alias la='ls -A'
 alias l='ls -CF'
 
@@ -98,12 +98,20 @@ fi
 #    . /etc/bash_completion
 #fi
 
-#myconfig_220817
+########CUSTOMIZE#####################
+#move to start of command line by Ctrl a
+set -o emacs
+#alias_220817
 alias vi='nvim'
 alias vim='nvim'
 alias ls='ls -ta'
 alias Documents='cd /mnt/c/Users/infoh/Documents'
 alias winhome='cd /mnt/c/Users/infoh'
+alias home='cd /home/infoh'
+alias mybash='cd /home/infoh/my_bashscripts'
+alias readj='less /mnt/h/マイドライブ/G_Private/journal.md'
+alias cdj='vi /mnt/h/マイドライブ/G_Private/journal.txt'
+alias freenote='vi /home/infoh/freenote.md' 
 #export PS1="\e[1;34m\u\e[1;35m@\e[1;31m\w\e[0m$ " 
 export PS1="\[\e[1;36m\]\u\[\e[m\]\[\e[1;34m\]@\h\[\e[m\]\[\e[1;35m\]:\w\[\e[m\]\$ "
 
@@ -113,9 +121,12 @@ if [ $HOSTNAME = "DESKTOP-98DKBEG" ]; then
 	alias gdrive='cd /mnt/h/マイドライブ/'
 fi
 
-#myconfig_221115
+#color_221115
 export LS_OPTIONS='-a --color=auto'
 eval "$(dircolors -b)"
 alias ls='ls $LS_OPTIONS'
-
-#test text for new branch
+#myscript 
+PATH=/home/infoh/my_bashscripts:${PATH}
+export PATH
+alias w3mmd="w3mmd.sh"
+alias journal="journal.sh"

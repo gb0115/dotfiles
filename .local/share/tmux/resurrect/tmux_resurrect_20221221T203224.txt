@@ -1,0 +1,3 @@
+pane	0	0	1	:*	0	DESKTOP-98DKBEG	:/root	1	bash	:
+window	0	0	:bash	1	:*	ae5d,65x32,0,0,0	:
+state	0	

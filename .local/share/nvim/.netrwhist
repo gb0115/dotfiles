@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =7
+let g:netrw_dirhist_7='/root'
+let g:netrw_dirhist_6='/root/dotfiles'
+let g:netrw_dirhist_5='/root'
+let g:netrw_dirhist_4='/root/dotfiles'
+let g:netrw_dirhist_3='/root'
+let g:netrw_dirhist_2='/root/dotfiles'
+let g:netrw_dirhist_1='/root'
+let g:netrw_dirhist_0='/root/dotfiles'
+let g:netrw_dirhist_9='/root'
+let g:netrw_dirhist_8='/root/dotfiles'

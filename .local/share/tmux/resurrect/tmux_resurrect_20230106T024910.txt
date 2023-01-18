@@ -1,0 +1,6 @@
+pane	12	0	1	:*	0	DESKTOP-98DKBEG	:/mnt/h/マイドライブ/G_Unix/ShellScript/Documents	1	bash	:
+pane	countdown	0	1	:*	0	DESKTOP-98DKBEG	:/home/infoh/my_bashscripts/countdown	1	nvim	:nvim youtube_timer4.sh
+pane	countdown	0	1	:*	1	DESKTOP-98DKBEG	:/home/infoh/my_bashscripts/countdown	0	bash	:
+window	12	0	:bash	1	:*	d9d0,134x32,0,0,21	:
+window	countdown	0	:nvim	1	:*	d66d,134x32,0,0{88x32,0,0,4,45x32,89,0,18}	:
+state	12	

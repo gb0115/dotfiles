@@ -1,0 +1,11 @@
+pane	Why_noone-5	0	1	:*	0	DESKTOP-98DKBEG	:/mnt/h/マイドライブ/G_Mental/ADHD	1	nvim	:nvim memo_Why_noone.md
+pane	bash hardway	0	1	:*	0	DESKTOP-98DKBEG	:/mnt/h/マイドライブ/G_Unix/Vim/Vim_the_Hardway	0	nvim	:nvim Vim_hardway_mapping.md Vim_hardway_modal_mapping.md
+pane	bash hardway	0	1	:*	1	DESKTOP-98DKBEG	:/mnt/h/マイドライブ/G_Unix/Vim/Vim_the_Hardway/learning_dir	0	nvim	:nvim foo.html
+pane	bash hardway	0	1	:*	2	DESKTOP-98DKBEG	:/mnt/h/マイドライブ/G_Unix/Vim/Vim_the_Hardway	1	bash	:
+pane	pandoc	0	1	:*	0	DESKTOP-98DKBEG	:/mnt/h/マイドライブ/G_Unix/Documents	1	bash	:
+pane	wordpress	0	1	:*	0	DESKTOP-98DKBEG	:/mnt/h/マイドライブ/G_Webdev/G_Docker	1	bash	:
+window	Why_noone-5	0	:nvim	1	:*	b343,134x32,0,0,6	:
+window	bash hardway	0	:bash	1	:*	c845,134x32,0,0{82x32,0,0,2,51x32,83,0[51x16,83,0,3,51x15,83,17,17]}	:
+window	pandoc	0	:bash	1	:*	b341,134x32,0,0,4	:
+window	wordpress	0	:bash	1	:*	b342,134x32,0,0,5	:
+state	bash hardway	

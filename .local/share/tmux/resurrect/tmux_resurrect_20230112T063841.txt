@@ -1,0 +1,21 @@
+pane	0	0	0	:-	0	DESKTOP-98DKBEG	:/root	1	bash	:
+pane	0	1	1	:*	0	DESKTOP-98DKBEG	:/root	1	bash	:
+pane	0	1	1	:*	1	DESKTOP-98DKBEG	:/root	0	bash	:
+pane	11	0	1	:*	0	DESKTOP-98DKBEG	:/mnt/h/マイドライブ/G_Unix/Vim/Vim_the_Hardway	1	nvim	:nvim -S
+pane	12	0	1	:*	0	DESKTOP-98DKBEG	:/mnt/h/マイドライブ/G_Unix/Vim/Vim_the_Hardway	1	bash	:
+pane	14	0	1	:*	0	DESKTOP-98DKBEG	:/mnt/h/マイドライブ/G_Unix/Vim/Vim_the_Hardway	1	bash	:
+pane	Dopamine	0	1	:*	0	DESKTOP-98DKBEG	:/mnt/h/マイドライブ/G_Mental/Dopamine	1	nvim	:nvim -S
+pane	bash hardway	0	1	:*	0	DESKTOP-98DKBEG	:/mnt/h/マイドライブ/G_Unix/Vim/Vim_the_Hardway	1	nvim	:nvim Vim_hardway_mapping.md Vim_hardway_modal_mapping.md
+pane	bash hardway	0	1	:*	1	DESKTOP-98DKBEG	:/mnt/h/マイドライブ/G_Unix/Vim/Vim_the_Hardway	0	bash	:
+pane	pandoc	0	1	:*	0	DESKTOP-98DKBEG	:/mnt/h/マイドライブ/G_Unix/Documents	1	bash	:
+pane	wordpress	0	1	:*	0	DESKTOP-98DKBEG	:/mnt/h/マイドライブ/G_Webdev/G_Docker	1	bash	:
+window	0	0	:bash	0	:-	b33d,134x32,0,0,0	:
+window	0	1	:bash	1	:*	7510,134x32,0,0[134x1,0,0,2,134x30,0,2,3]	:
+window	11	0	:nvim	1	:*	b341,134x32,0,0,4	:
+window	12	0	:bash	1	:*	b342,134x32,0,0,5	:
+window	14	0	:bash	1	:*	b343,134x32,0,0,6	:
+window	Dopamine	0	:nvim	1	:*	b344,134x32,0,0,7	:
+window	bash hardway	0	:nvim	1	:*	987a,134x32,0,0{86x32,0,0,8,47x32,87,0,9}	:
+window	pandoc	0	:bash	1	:*	59cf,134x32,0,0,10	:
+window	wordpress	0	:bash	1	:*	59d0,134x32,0,0,11	:
+state	bash hardway	Dopamine

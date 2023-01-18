@@ -1,0 +1,5 @@
+pane	2	0	1	:*	0	DESKTOP-98DKBEG	:/root	1	bash	:
+pane	mybash	0	1	:*	0	DESKTOP-98DKBEG	:/home/infoh/my_bashscripts/Document	1	nvim	:nvim -O Document/221228_bash_shellscript_tutorial.sh test.sh
+window	2	0	:bash	1	:*	b33f,134x32,0,0,2	:
+window	mybash	0	:nvim	1	:*	b33e,134x32,0,0,1	:
+state	2	

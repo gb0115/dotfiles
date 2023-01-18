@@ -1,0 +1,7 @@
+pane	18	0	1	:*M	0	DESKTOP-98DKBEG	:/mnt/h/マイドライブ/G_Mental/Narcissist	1	nvim	:nvim Narcissit_love.md
+pane	transcript	0	1	:*	0	DESKTOP-98DKBEG	:/mnt/h/マイドライブ/G_Webdev/G_Docker	1	nvim	:nvim Install_Wordpress.md Install_Wordpress2.md Install_Wordpress3.md
+pane	transcript	1	0	:-	0	DESKTOP-98DKBEG	:/home/infoh/my_bashscripts	1	bash	:
+window	18	0	:nvim	1	:*M	d9d2,134x32,0,0,23	:
+window	transcript	0	:nvim	1	:*	b33e,134x32,0,0,1	:
+window	transcript	1	:bash	0	:-	b33f,134x32,0,0,2	:
+state	18	transcript

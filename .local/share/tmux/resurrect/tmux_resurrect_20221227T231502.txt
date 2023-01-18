@@ -1,0 +1,23 @@
+pane	10	0	1	:*	0	DESKTOP-98DKBEG	:/home/infoh/my_bashscripts/Document	1	bash	:
+pane	4	0	1	:*	0	DESKTOP-98DKBEG	:/root	1	bash	:
+pane	5	0	1	:*	0	DESKTOP-98DKBEG	:/home/infoh/my_bashscripts/test	1	nvim	:nvim test2.sh
+pane	6	0	1	:*	0	DESKTOP-98DKBEG	:/home/infoh/my_bashscripts/Document	1	bash	:
+pane	7	0	1	:*	0	DESKTOP-98DKBEG	:/home/infoh/my_bashscripts/Document	1	bash	:
+pane	9	0	1	:*	0	DESKTOP-98DKBEG	:/home/infoh/my_bashscripts/Document	1	bash	:
+pane	Urge_surf	0	1	:*	0	DESKTOP-98DKBEG	:/mnt/h/マイドライブ/G_Mental	1	bash	:
+pane	Wordpress	0	1	:*	0	DESKTOP-98DKBEG	:/mnt/h/マイドライブ/G_Webdev/G_Docker	1	bash	:
+pane	mybash	0	1	:*	0	DESKTOP-98DKBEG	:/home/infoh/my_bashscripts/Document	0	nvim	:nvim countdown.md
+pane	mybash	0	1	:*	1	DESKTOP-98DKBEG	:/home/infoh/my_bashscripts/countdown	0	nvim	:nvim countdown2.sh
+pane	mybash	0	1	:*	2	DESKTOP-98DKBEG	:/home/infoh/my_bashscripts/countdown	1	bash	:
+pane	timer	0	1	:*	0	DESKTOP-98DKBEG	:/home/infoh/my_bashscripts/countdown	1	nvim	:nvim youtube_Stopwatch.md
+window	10	0	:bash	1	:*	5763,65x32,0,0,14	:
+window	4	0	:bash	1	:*	b344,134x32,0,0,7	:
+window	5	0	:nvim	1	:*	ae66,65x32,0,0,9	:
+window	6	0	:bash	1	:*	59cf,134x32,0,0,10	:
+window	7	0	:bash	1	:*	59d0,134x32,0,0,11	:
+window	9	0	:bash	1	:*	5762,65x32,0,0,13	:
+window	Urge_surf	0	:bash	1	:*	b340,134x32,0,0,3	:
+window	Wordpress	0	:bash	1	:*	b341,134x32,0,0,4	:
+window	mybash	0	:bash	1	:*	b202,134x32,0,0[134x23,0,0,1,134x8,0,24{67x8,0,24,2,66x8,68,24,5}]	:
+window	timer	0	:nvim	1	:*	5761,65x32,0,0,12	:
+state	timer	10

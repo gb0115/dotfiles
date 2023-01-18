@@ -1,0 +1,35 @@
+pane	10	0	1	:*	0	DESKTOP-98DKBEG	:/home/infoh/my_bashscripts/Document	1	bash	:
+pane	11	0	1	:*	0	DESKTOP-98DKBEG	:/home/infoh/my_bashscripts/Document	1	bash	:
+pane	13	0	1	:*	0	DESKTOP-98DKBEG	:/mnt/h/マイドライブ	1	bash	:
+pane	14	0	1	:*	0	DESKTOP-98DKBEG	:/home/infoh/my_bashscripts/Document	1	bash	:
+pane	22	0	1	:*	0	DESKTOP-98DKBEG	:/home/infoh/my_bashscripts/Document	1	bash	:
+pane	23	0	1	:*	0	DESKTOP-98DKBEG	:/home/infoh/my_bashscripts/Document	1	bash	:
+pane	4	0	1	:*	0	DESKTOP-98DKBEG	:/root	1	bash	:
+pane	5	0	1	:*	0	DESKTOP-98DKBEG	:/home/infoh/my_bashscripts/test	1	nvim	:nvim test2.sh
+pane	6	0	1	:*	0	DESKTOP-98DKBEG	:/home/infoh/my_bashscripts/Document	1	bash	:
+pane	7	0	1	:*	0	DESKTOP-98DKBEG	:/home/infoh/my_bashscripts/Document	1	bash	:
+pane	9	0	1	:*	0	DESKTOP-98DKBEG	:/home/infoh/my_bashscripts/Document	1	bash	:
+pane	Urge_surf	0	1	:*	0	DESKTOP-98DKBEG	:/mnt/h/マイドライブ/G_Mental	1	bash	:
+pane	Wordpress	0	1	:*	0	DESKTOP-98DKBEG	:/mnt/h/マイドライブ/G_Webdev/G_Docker	1	bash	:
+pane	mybash	0	1	:*	0	DESKTOP-98DKBEG	:/home/infoh/my_bashscripts/Document	0	nvim	:nvim countdown.md
+pane	mybash	0	1	:*	1	DESKTOP-98DKBEG	:/home/infoh/my_bashscripts/countdown	1	nvim	:nvim countdown2.sh
+pane	mybash	0	1	:*	2	DESKTOP-98DKBEG	:/home/infoh/my_bashscripts/countdown	0	bash	:
+pane	timer	0	1	:*	0	DESKTOP-98DKBEG	:/home/infoh/my_bashscripts/Document	0	nvim	:nvim 221228_bash_shellscript_tutorial.sh
+pane	timer	0	1	:*	1	DESKTOP-98DKBEG	:/home/infoh/my_bashscripts/test	1	nvim	:nvim math.sh
+pane	timer	0	1	:*	2	DESKTOP-98DKBEG	:/home/infoh/my_bashscripts/countdown	0	bash	:
+window	10	0	:bash	1	:*	59d6,134x32,0,0,17	:
+window	11	0	:bash	1	:*	59d7,134x32,0,0,18	:
+window	13	0	:[tmux]	1	:*	59d4,134x32,0,0,15	:
+window	14	0	:bash	1	:*	59d5,134x32,0,0,16	:
+window	22	0	:[tmux]	1	:*	d9d3,134x32,0,0,24	:
+window	23	0	:bash	1	:*	d9d4,134x32,0,0,25	:
+window	4	0	:bash	1	:*	59d8,134x32,0,0,19	:
+window	5	0	:nvim	1	:*	d9cf,134x32,0,0,20	:
+window	6	0	:bash	1	:*	d9d0,134x32,0,0,21	:
+window	7	0	:bash	1	:*	d9d1,134x32,0,0,22	:
+window	9	0	:bash	1	:*	d9d2,134x32,0,0,23	:
+window	Urge_surf	0	:bash	1	:*	b345,134x32,0,0,8	:
+window	Wordpress	0	:bash	1	:*	b346,134x32,0,0,9	:
+window	mybash	0	:nvim	1	:*	525b,134x32,0,0[134x23,0,0,10,134x8,0,24{67x8,0,24,11,66x8,68,24,12}]	:
+window	timer	0	:nvim	1	:*	d2fc,134x32,0,0{77x32,0,0,13,56x32,78,0[56x16,78,0,26,56x15,78,17,27]}	:
+state	timer	mybash

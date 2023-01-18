@@ -1,0 +1,10 @@
+pane	Dopamine	0	1	:*	0	DESKTOP-98DKBEG	:/mnt/h/マイドライブ/G_Mental/Dopamine	1	nvim	:nvim -S
+pane	bash hardway	0	1	:*	0	DESKTOP-98DKBEG	:/mnt/h/マイドライブ/G_Unix/Vim/Vim_the_Hardway	1	nvim	:nvim Vim_hardway_mapping.md Vim_hardway_modal_mapping.md
+pane	bash hardway	0	1	:*	1	DESKTOP-98DKBEG	:/root	0	nvim	:nvim /root/.vimrc
+pane	pandoc	0	1	:*	0	DESKTOP-98DKBEG	:/mnt/h/マイドライブ/G_Unix/Documents	1	bash	:
+pane	wordpress	0	1	:*	0	DESKTOP-98DKBEG	:/mnt/h/マイドライブ/G_Webdev/G_Docker	1	bash	:
+window	Dopamine	0	:nvim	1	:*	b344,134x32,0,0,7	:
+window	bash hardway	0	:nvim	1	:*	987a,134x32,0,0{86x32,0,0,8,47x32,87,0,9}	:
+window	pandoc	0	:bash	1	:*	59cf,134x32,0,0,10	:
+window	wordpress	0	:bash	1	:*	59d0,134x32,0,0,11	:
+state	Dopamine	

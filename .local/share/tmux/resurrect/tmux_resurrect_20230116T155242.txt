@@ -1,0 +1,18 @@
+pane	5	0	1	:*	0	DESKTOP-98DKBEG	:/root	1	bash	:
+pane	6	0	1	:*	0	DESKTOP-98DKBEG	:/root/dotfiles	1	bash	:
+pane	7	0	1	:*	0	DESKTOP-98DKBEG	:/home/infoh	0	nvim	:nvim /mnt/h/マイドライブ/G_Private/journal.txt
+pane	7	0	1	:*	1	DESKTOP-98DKBEG	:/root/dotfiles	1	bash	:
+pane	Why_noone-5	0	1	:*	0	DESKTOP-98DKBEG	:/mnt/h/マイドライブ/G_Mental/ADHD	1	nvim	:nvim memo_Why_noone.md
+pane	bash hardway	0	1	:*	0	DESKTOP-98DKBEG	:/mnt/h/マイドライブ/G_Unix/Vim/Vim_the_Hardway	0	nvim	:nvim Vim_hardway_mapping.md Vim_hardway_modal_mapping.md
+pane	bash hardway	0	1	:*	1	DESKTOP-98DKBEG	:/mnt/h/マイドライブ/G_Unix/Vim/Vim_the_Hardway/learning_dir	0	nvim	:nvim foo.html
+pane	bash hardway	0	1	:*	2	DESKTOP-98DKBEG	:/mnt/h/マイドライブ/G_Unix/Vim/Vim_the_Hardway	1	bash	:
+pane	pandoc	0	1	:*	0	DESKTOP-98DKBEG	:/mnt/h/マイドライブ/G_Unix/Documents	1	nvim	:nvim pandoc_230109.md
+pane	wordpress	0	1	:*	0	DESKTOP-98DKBEG	:/mnt/h/マイドライブ/G_Webdev/G_Docker	1	bash	:
+window	5	0	:bash	1	:*	b344,134x32,0,0,7	:
+window	6	0	:bash	1	:*	b345,134x32,0,0,8	:
+window	7	0	:bash	1	:*	cc93,134x32,0,0{67x32,0,0,9,66x32,68,0,10}	:
+window	Why_noone-5	0	:nvim	1	:*	b33e,134x32,0,0,1	:
+window	bash hardway	0	:bash	1	:*	4fc5,134x32,0,0{82x32,0,0,2,51x32,83,0[51x16,83,0,3,51x15,83,17,4]}	:
+window	pandoc	0	:nvim	1	:*	b342,134x32,0,0,5	:
+window	wordpress	0	:bash	1	:*	b343,134x32,0,0,6	:
+state	7	

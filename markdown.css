@@ -6,20 +6,33 @@
 	background: #fff;
 	padding: 34px;
 }
-
+.octicon.octicon-link {
+  display:none;
+}
 p {
-	font-size: 20px;
+	font-size: 18px;
 	line-height: 1.4em;
 	font-family: sans-serif;
 }
+h2 {
+	font-size: 20px;
+}
+
+li {
+	font-size: 18px;
+	line-height: 1.4em;
+	font-family: sans-serif;
+}
+
 strong {
-	color:blue;
+	color:#aaaaff;
 }
 
 em {
-	color:red;
+	color:#ff9aaf;
 	font-weight:bold;
 	text-decoration:none;
+	font-style: normal;
 }
 
 img {

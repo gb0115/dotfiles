@@ -1,0 +1,13 @@
+pane	2	0	1	:*	0	DESKTOP-98DKBEG	:/root	1	bash	:
+pane	4	0	1	:*	0	DESKTOP-98DKBEG	:/home/infoh/my_bashscripts	1	bash	:
+pane	5	0	1	:*	0	DESKTOP-98DKBEG	:/home/infoh/my_bashscripts	1	bash	:
+pane	6	0	1	:*	0	DESKTOP-98DKBEG	:/root	1	bash	:
+pane	mybash	0	1	:*	0	DESKTOP-98DKBEG	:/home/infoh/my_bashscripts/Document	1	nvim	:nvim -o Document/221228_bash_shellscript_tutorial.sh test.sh
+pane	mybash	0	1	:*	1	DESKTOP-98DKBEG	:/home/infoh/my_bashscripts	0	nvim	:nvim test.sh
+pane	mybash	0	1	:*	2	DESKTOP-98DKBEG	:/home/infoh/my_bashscripts	0	bash	:
+window	2	0	:bash	1	:*	b33f,134x32,0,0,2	:
+window	4	0	:bash	1	:*	b344,134x32,0,0,7	:
+window	5	0	:bash	1	:*	b345,134x32,0,0,8	:
+window	6	0	:bash	1	:*	b346,134x32,0,0,9	:
+window	mybash	0	:nvim	1	:*	af47,134x32,0,0{94x32,0,0,3,39x32,95,0[39x22,95,0,5,39x9,95,23,6]}	:
+state	mybash	6

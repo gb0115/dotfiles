@@ -1,4 +1,4 @@
-"ENVIRONMENT
+"ENVIRONMENT========================================
 "文字関係の設定
 let $LANG='UTF-8,ja_JP'
 
@@ -14,10 +14,12 @@ set fileencodings=utf-8
 "shellコマンドの文字化けを防ぐ
 "set termencoding=cp932
 "Keep the current directory and the browsing directory synced. 
+"control charcter
+"trail：行末のスペースを表示
+set listchars=tab:»-,trail:-,nbsp:%,eol:↲
+
 let g:netrw_keepdir = 0
 let g:netrw_liststyle = 2
-" deletes netrw's buffer once it's hidden
-autocmd FileType netrw setl bufhidden=delete
 "fuzzy search
 set nocompatible "limit search to your project
 set path+=** "Search All subdirectories and recursively
@@ -29,10 +31,15 @@ set wildmode=longest:full,full
 "cuiのnvimで行崩れが起こるのでwindow幅設定
 "set lines=24 columns=84
 "cmdlineの高さ
-set cmdheight=2
+set cmdheight=1
 "tabの数の設定
-set tabstop=4
-set shiftwidth=4
+set tabstop=2       " The width of a TAB is set to 4.
+                    " Still it is a \t. It is just that
+                    " Vim will interpret it to be having
+                    " a width of 4.
+set shiftwidth=2    " Indents will have a width of 4
+set softtabstop=2   " Sets the number of columns for a TAB
+set expandtab       " Expand TABs to spaces
 "3行残して改行、1行左に空ける
 set scrolloff=1
 set foldcolumn=1
@@ -41,32 +48,78 @@ set foldcolumn=1
 "一番下（上）に付く前に早めにスクロールする。
 set scrolljump=4
 set scrolloff=6
+"split at right pane
+set splitright
 
-"MAPPING 
-"jj 
-imap jj <Esc>
-"leader key を \ から , へ変える
-let mapleader = '\'
-"inoremap <tab> <c-x><c-f>	
+"MAPPING================================================= 
+"LEADER
+"<leader> keyを,にする
+let mapleader = ','
+"<localleader> keyを\\にする
+let maplocalleader = '\\'
+"Quick VIMRC
+nnoremap <leader>ev :split /root/.vimrc<cr>
+nnoremap <leader>sv :source /root/.vimrc<cr>
+"Join selected lines then delete a space
+"日本語用
+vnoremap <S-j> J :s/\s//g<cr><esc>
+"アルファベット用
+vnoremap <c-j> J 
+"dd with <c-s>
+nnoremap <c-s> dd
+"insert newline
+nnoremap <S-o> i<cr><esc><S-o><esc>
+"全角スペースの検索 （動かない。C-spaceはマッピングできない？
+"nnoremap f<S-space> f<C-space><space>
+"nore in inoremap or nnoremap means non recursive. this makes mappings avoid confilct with other custom ( or plugins )mappings.
+"
+"<CR> means 'Carrige Return'
+"1.mapping for insert mode
+"ctrl+d for 'go in normal mode and delete whole line with dd, then back to
+"insert mode"
+inoremap <c-d> <esc>ddi
+"2.mapping for insert mode
+"make text uppercase
+"viw mean into visual and select a word
+"$i mean move cursor to end and back to insert mode
+inoremap <c-u> <esc>viwU$i 
+"same mapping but in normal mode
+nnoremap <c-u> viwUe
+"jk for <esc>
+inoremap jk <esc>
+inoremap <esc> <nop>
+"line number toggle
 "Map F3 to toggle on and off the line numbers in Normal mode
-nmap <F3> :set nu! <CR>
+nnoremap <F3> :set nu! <CR>
+"Map <leader>t to input current time
+nnoremap <leader>t :put =strftime('%Y/%m/%d(%a)')
 "Map <leader>F3 to toggle on and off the Relative line numbers in Normal mode
-nmap <leader><F3> :set rnu! <CR>
+nnoremap <leader><F3> :set rnu! <CR>
 "Map F3 to toggle on and off the line numbers in Insert mode
-imap <F3> <ESC>:set nu! <CR>i
+inoremap <F3> <esc>:set nu! <CR>i
 "Map F4 to toggle on and off the Relative line numbers in Insert mode
-imap <F4> <ESC>:set rnu! <CR>i
+inoremap <F4> <esc>:set rnu! <CR>i
+"quote with "
+nnoremap <leader>" viw<esc>bi"<esc>ea"<esc>l
+nnoremap <leader>' viw<esc>bi'<esc>ea'<esc>l
+vnoremap <leader>v" <esc>`<<esc>i"<esc>`>ea"<esc>l
+vnoremap <leader>v' <esc>`<<esc>i'<esc>`>ea'<esc>l
+nnoremap H 0
+nnoremap L $
+"nnoremap <leader>" viw<esc>a"<esc>bi"<esc>lel
+"single quote
+nnoremap <leader>' bi'<esc>ea'<esc>
+"H,L as strong h,l
 ":term から抜けてウィンドウ移動
-tmap <Esc> <C-\><C-n>
-"if has('nvim')
-"	tnoremap <C-l> <C-\><C-n>
-"endif
-"TODO
-"Map autocomplete C-x C-f as <tab>
+tnoremap <esc> <C-\><C-n>
+"AUTOCMD================================================= 
+"deletes netrw's buffer once it's hidden
+autocmd FileType netrw setl bufhidden=delete
+autocmd FileType javascript nnoremap <buffer> <localleader>c I//<esc>
+autocmd FileType python     nnoremap <buffer> <localleader>c I#<esc>
+"insert datetime when open freenote
 
-
-"COLOR
-
+"COLOR====================================================
 "その他未分類
 syntax on
 set laststatus=2
@@ -86,9 +139,6 @@ set mouse-=a
 set noerrorbells
 set belloff=all
 
-" clipboard
-set clipboard^=unnamed,unnamedplus
-"set clipboard+=unnamed,unnamedplus
 set autochdir
 let g:mkdp_markdown_css='/home/infoh/markdown.css'
 let g:mkdp_theme='light'
@@ -130,8 +180,30 @@ Plug 'tpope/vim-surround'
 Plug 'mattn/emmet-vim',{'for':'html'}
 call plug#end()
 
+"ABBR
+"Anchor and Reference
+abbr anchor [^n]
+abbr refer [^n]:
 "abbr space key to use abbr
-abbr mymail info.hh1216@gmail.com
+abbr m_mermaid ```mermaid<cr>
+\flowchart LR;<cr>
+\<cr>
+\就活 --> Coding<cr>
+\<cr>
+\subgraph ポートフォーリオ<cr>
+\Coding-->Sassの教科書-->Portfolio<cr>
+\end<cr>
+\<cr>
+\subgraph 汎用知識<cr>
+\Git-->Get_vim_colortheme<cr>
+\Git-->Sync_vimrc<cr>
+\end<cr>
+\<cr>
+\Get_vim_colortheme-->アプリ-->Portfolio<cr>
+\Sync_vimrc-->アプリ<cr>
+\```
+
+"COLORSCHEME
 "colorscheme dracula
 colorscheme PaperColor
 set background=light
@@ -141,4 +213,6 @@ let g:mkdp_markdown_css='/root/markdown.css'
 let g:mkdp_theme='light'
 let vim_markdown_preview_github=1  
 
+"clipboard
+"set clipboard^=unnamed,unnamedplus
 

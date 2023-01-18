@@ -1,0 +1,8 @@
+pane	20	0	1	:*	0	DESKTOP-98DKBEG	:/mnt/h/マイドライブ/G_Mental	1	bash	:
+pane	22	0	1	:*	0	DESKTOP-98DKBEG	:/home/infoh/my_bashscripts	1	bash	:
+pane	transcript	0	1	:*	0	DESKTOP-98DKBEG	:/mnt/h/マイドライブ/G_Webdev/G_Docker	1	nvim	:nvim Install_Wordpress.md Install_Wordpress2.md Install_Wordpress3.md
+pane	transcript	0	1	:*	1	DESKTOP-98DKBEG	:/mnt/h/マイドライブ/G_Webdev/G_Docker	0	nvim	:nvim Install_Wordpress_memo.md
+window	20	0	:bash	1	:*	b33e,134x32,0,0,1	:
+window	22	0	:bash	1	:*	b33f,134x32,0,0,2	:
+window	transcript	0	:nvim	1	:*	1374,134x32,0,0{76x32,0,0,3,57x32,77,0,4}	:
+state	transcript	22

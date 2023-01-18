@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =1
+let g:netrw_dirhistcnt =2
+let g:netrw_dirhist_2='/root/.vim'
 let g:netrw_dirhist_1='/mnt/g/マイドライブ/G_Private/My_omm'
 let g:netrw_dirhist_0='/mnt/g/マイドライブ/G_Private'
 let g:netrw_dirhist_9='/mnt/g/マイドライブ/G_Private/insta_tuts'
@@ -9,4 +10,3 @@ let g:netrw_dirhist_6='/'
 let g:netrw_dirhist_5='/root'
 let g:netrw_dirhist_4='/mnt'
 let g:netrw_dirhist_3='/'
-let g:netrw_dirhist_2='/root'

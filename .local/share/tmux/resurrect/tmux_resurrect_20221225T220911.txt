@@ -1,0 +1,13 @@
+pane	20	0	1	:*	0	DESKTOP-98DKBEG	:/mnt/h/マイドライブ/G_Mental/Surf_Urge	1	nvim	:nvim Urge_Surfing.md
+pane	4	0	1	:*	0	DESKTOP-98DKBEG	:/home/infoh/my_bashscripts	0	bash	:
+pane	4	0	1	:*	1	DESKTOP-98DKBEG	:/mnt/h	1	bash	:
+pane	5	0	1	:*	0	DESKTOP-98DKBEG	:/root	1	nvim	:nvim
+pane	Urge_surf	0	1	:*	0	DESKTOP-98DKBEG	:/mnt/h/マイドライブ/G_Mental	1	nvim	:nvim ADHD_Self-Awareness.md
+pane	Wordpress	0	1	:*	0	DESKTOP-98DKBEG	:/mnt/h/マイドライブ/G_Webdev/G_Docker	1	nvim	:nvim Install_Wordpress.md
+pane	Wordpress	0	1	:*	1	DESKTOP-98DKBEG	:/home/infoh/wordpress	0	bash	:
+window	20	0	:nvim	1	:*	b33e,134x32,0,0,1	:
+window	4	0	:bash	1	:*	27ca,134x32,0,0[134x16,0,0,5,134x15,0,17,6]	:
+window	5	0	:nvim	1	:*	b344,134x32,0,0,7	:
+window	Urge_surf	0	:[tmux]	1	:*	b33f,134x32,0,0,2	:
+window	Wordpress	0	:nvim	1	:*	0e86,134x32,0,0{85x32,0,0,3,48x32,86,0,8}	:
+state	Wordpress	20

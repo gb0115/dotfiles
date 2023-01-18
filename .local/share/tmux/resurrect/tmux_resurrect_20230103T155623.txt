@@ -1,0 +1,14 @@
+pane	3	0	1	:*	0	DESKTOP-98DKBEG	:/root	1	nvim	:nvim How_to_Center_your_Bruised_Emotions_221231.md Jasmine_221231.md Never_Enough_Craving_221231.md
+pane	4	0	1	:*	0	DESKTOP-98DKBEG	:/mnt/h/マイドライブ/G_Mental/ADHD	1	bash	:
+pane	6	0	1	:*	0	DESKTOP-98DKBEG	:/mnt/h/マイドライブ/G_Mental/ADHD	1	nvim	:nvim How_to_Center_your_Bruised_Emotions_221231.md
+pane	countdown	0	1	:*	0	DESKTOP-98DKBEG	:/home/infoh/my_bashscripts/countdown	1	nvim	:nvim youtube_timer4.sh
+pane	countdown	0	1	:*	1	DESKTOP-98DKBEG	:/home/infoh/my_bashscripts/countdown	0	bash	:
+pane	mybash	0	1	:*	0	DESKTOP-98DKBEG	:/home/infoh/my_bashscripts/Document	0	nvim	:nvim 221228_bash_shellscript_tutorial.sh
+pane	mybash	0	1	:*	1	DESKTOP-98DKBEG	:/home/infoh/my_bashscripts	1	nvim	:nvim test.sh
+pane	mybash	0	1	:*	2	DESKTOP-98DKBEG	:/home/infoh/my_bashscripts	0	bash	:
+window	3	0	:nvim	1	:*	b33e,134x32,0,0,1	:
+window	4	0	:bash	1	:*	b33f,134x32,0,0,2	:
+window	6	0	:nvim	1	:*	b346,134x32,0,0,9	:
+window	countdown	0	:nvim	1	:*	27c5,134x32,0,0[134x16,0,0,3,134x15,0,17,4]	:
+window	mybash	0	:nvim	1	:*	f349,134x32,0,0{94x32,0,0,5,39x32,95,0[39x22,95,0,6,39x9,95,23,7]}	:
+state	6	mybash

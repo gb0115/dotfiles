@@ -1,0 +1,8 @@
+pane	11	0	1	:*	0	DESKTOP-98DKBEG	:/mnt/h/マイドライブ/G_Unix/ShellScript/Documents	0	nvim	:nvim Documents/insert_text_top.md_230105.md
+pane	11	0	1	:*	1	DESKTOP-98DKBEG	:/mnt/h/マイドライブ/G_Unix/ShellScript/With_echo	1	nvim	:nvim temp.sh
+pane	11	0	1	:*	2	DESKTOP-98DKBEG	:/mnt/h/マイドライブ/G_Unix/ShellScript/With_echo	0	bash	:
+pane	countdown	0	1	:*	0	DESKTOP-98DKBEG	:/home/infoh/my_bashscripts/countdown	1	nvim	:nvim youtube_timer4.sh
+pane	countdown	0	1	:*	1	DESKTOP-98DKBEG	:/home/infoh/my_bashscripts/countdown	0	bash	:
+window	11	0	:nvim	1	:*	9d72,134x32,0,0{87x32,0,0,17,46x32,88,0[46x16,88,0,19,46x15,88,17,20]}	:
+window	countdown	0	:nvim	1	:*	d66d,134x32,0,0{88x32,0,0,4,45x32,89,0,18}	:
+state	11	countdown
