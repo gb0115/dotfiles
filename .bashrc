@@ -111,12 +111,12 @@ alias home='cd /home/infoh'
 alias mybash='cd /home/infoh/my_bashscripts'
 alias readj='less /mnt/h/マイドライブ/G_Private/journal.md'
 alias cdj='vi /mnt/h/マイドライブ/G_Private/journal.txt'
-alias freenote='vi /home/infoh/freenote.md' 
+alias freenote='vi /mnt/h/マイドライブ/G_Private/freenote.md' 
 #export PS1="\e[1;34m\u\e[1;35m@\e[1;31m\w\e[0m$ " 
 export PS1="\[\e[1;36m\]\u\[\e[m\]\[\e[1;34m\]@\h\[\e[m\]\[\e[1;35m\]:\w\[\e[m\]\$ "
 
 #mout gdrive in terminal on oldPC
-if [ $HOSTNAME = "yourhostname" ]; then
+if [ $HOSTNAME = "DESKTOP-98DKBEG" ]; then
 	sudo mount -t drvfs H: /mnt/h
 	alias gdrive='cd /mnt/h/マイドライブ/'
 fi
@@ -126,7 +126,10 @@ export LS_OPTIONS='-a --color=auto'
 eval "$(dircolors -b)"
 alias ls='ls $LS_OPTIONS'
 #myscript 
-PATH=/home/infoh/my_bashscripts:${PATH}
+PATH=/home/infoh/my_bashscripts/gitfolder:${PATH}
 export PATH
 alias w3mmd="w3mmd.sh"
 alias journal="journal.sh"
+
+
+export HISTTIMEFORMAT="%F %T "
