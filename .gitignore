@@ -1,0 +1,10 @@
+tmux_plugins/
+.wsl-config
+.w3m/
+.viminfo
+.ssh/
+.selected_editor
+.gitconfig
+.local/
+.config/
+.vim/
