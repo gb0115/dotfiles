@@ -111,7 +111,10 @@ alias home='cd /home/infoh'
 alias mybash='cd /home/infoh/my_bashscripts'
 alias readj='less /mnt/h/マイドライブ/G_Private/journal.md'
 alias cdj='vi /mnt/h/マイドライブ/G_Private/journal.txt'
+alias cdjmd='vi /mnt/h/マイドライブ/G_Private/journal.md'
 alias freenote='vi /mnt/h/マイドライブ/G_Private/freenote.md' 
+alias mydocker='cd /mnt/c/Users/infoh/Documents/Program/Docker/' 
+alias myscript='cd /home/infoh/my_bashscripts/'
 #export PS1="\e[1;34m\u\e[1;35m@\e[1;31m\w\e[0m$ " 
 export PS1="\[\e[1;36m\]\u\[\e[m\]\[\e[1;34m\]@\h\[\e[m\]\[\e[1;35m\]:\w\[\e[m\]\$ "
 

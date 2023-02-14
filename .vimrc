@@ -57,7 +57,7 @@ set splitright
 "ENV MAP=================================================
 "LEADER
 "<leader> keyを,にする
-let mapleader = ','
+let mapleader = '@'
 "<localleader> keyを\\にする
 let maplocalleader = '\\'
 "Quick VIMRC
@@ -66,7 +66,7 @@ nnoremap <leader>sv :source /root/.vimrc<cr>
 "Quick MyJournal
 nnoremap <leader>ej :vsplit /mnt/h/マイドライブ/G_Private/journal.md<cr>
 "Quick MyDict
-nnoremap <leader>ee :vsplit /mnt/h/マイドライブ/G_Private/eng.md<cr>
+nnoremap <leader>ee :vsplit /mnt/h/マイドライブ/G_Private/eng.md<cr><Esc>
 "Quick Myterms
 nnoremap <leader>et :vsplit /mnt/h/マイドライブ/G_Private/terms.md<cr>
 "Quick MyGit_note
@@ -75,8 +75,6 @@ nnoremap <leader>eg :e /mnt/h/マイドライブ/G_Webdev/Documents/Learn_Git.md
 nnoremap <leader>ed :e /mnt/h/マイドライブ/G_Webdev/G_Docker/Docker_terms.md<cr>
 
 "EDIT MAP=================================================
-"Select paragraph
-nnoremap <S-p> v/^$<cr>
 "Join selected lines then delete a space
 "日本語用
 vnoremap <S-j> J :s/\s//g<cr><esc>
@@ -104,6 +102,8 @@ inoremap <c-d> <esc>ddi
 inoremap <c-u> <esc>viwU$i 
 "same mapping but in normal mode
 nnoremap <c-u> viwUe
+"replace <S-a> to <C-a>
+nnoremap <C-a> <S-a>
 "jk for <esc>
 inoremap jk <esc>
 inoremap <esc> <nop>
@@ -209,14 +209,15 @@ call plug#end()
 "ABBR
 "Anchor and Reference
 abbr tick ```
-abbr todo - [ ] 
+abbr todo - [ ]
 abbr anchor [^n]
 abbr refer [^n]:<cr>
 abbr term ### :<cr>
 abbr word ### :<cr>
-abbr pds Plan:<cr>
-\Do:<cr>
-\See:<cr>
+abbr pds - Plan:<cr>
+\- Do:<cr>
+\- See:<cr>
+abbr timestamp 00:00
 
 abbr m_mermaid ```mermaid<cr>
 \flowchart LR;<cr>
@@ -235,6 +236,11 @@ abbr m_mermaid ```mermaid<cr>
 \Get_vim_colortheme-->アプリ-->Portfolio<cr>
 \Sync_vimrc-->アプリ<cr>
 \```
+"FOLDING 
+"au BufWinLeave * mkview
+"au BufWinEnter * silent loadview
+autocmd BufWinLeave *.* mkview!
+autocmd BufWinEnter *.* silent loadview
 
 "COLORSCHEME
 "colorscheme dracula
@@ -245,7 +251,4 @@ set background=light
 let g:mkdp_markdown_css='/root/markdown.css'
 let g:mkdp_theme='light'
 let vim_markdown_preview_github=1  
-"FOLDING 
-au BufWinLeave * mkview
-au BufWinEnter * silent loadview
 
