@@ -108,13 +108,15 @@ alias ls='ls -ta'
 alias Documents='cd /mnt/c/Users/infoh/Documents'
 alias winhome='cd /mnt/c/Users/infoh'
 alias home='cd /home/infoh'
-alias mybash='cd /home/infoh/my_bashscripts'
 alias readj='less /mnt/h/マイドライブ/G_Private/journal.md'
 alias cdj='vi /mnt/h/マイドライブ/G_Private/journal.txt'
 alias cdjmd='vi /mnt/h/マイドライブ/G_Private/journal.md'
 alias freenote='vi /mnt/h/マイドライブ/G_Private/freenote.md' 
 alias mydocker='cd /mnt/c/Users/infoh/Documents/Program/Docker/' 
-alias myscript='cd /home/infoh/my_bashscripts/'
+alias myscript='cd /home/infoh/shellscripts/'
+alias pomodoro='vi /mnt/h/マイドライブ/G_Private/pomodoro_count.txt'
+alias mypython='cd /home/infoh/mypython'
+alias todolist='vi /mnt/h/マイドライブ/G_Private/todolist.md'
 #export PS1="\e[1;34m\u\e[1;35m@\e[1;31m\w\e[0m$ " 
 export PS1="\[\e[1;36m\]\u\[\e[m\]\[\e[1;34m\]@\h\[\e[m\]\[\e[1;35m\]:\w\[\e[m\]\$ "
 
@@ -129,7 +131,7 @@ export LS_OPTIONS='-a --color=auto'
 eval "$(dircolors -b)"
 alias ls='ls $LS_OPTIONS'
 #myscript 
-PATH=/home/infoh/my_bashscripts/gitfolder:${PATH}
+PATH=/home/infoh/shellscripts:${PATH}
 export PATH
 alias w3mmd="w3mmd.sh"
 alias journal="journal.sh"

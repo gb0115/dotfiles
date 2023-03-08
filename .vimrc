@@ -1,7 +1,6 @@
 "ENVIRONMENT========================================
 "文字関係の設定
 let $LANG='UTF-8,ja_JP'
-
 "ファイルを開くときの文字コードのリスト。一致しない、判別できない場合、文字化けする。
 "（その際、:set fenc? でlatin1となる。）
 "set fileencodings=utf-8,ucs-bom,iso-2022-jp-3,iso-2022-jp,eucjp-ms,euc-jisx0213,euc-jp,sjis,cp932
@@ -12,15 +11,17 @@ set encoding=utf-8
 set fileencodings=utf-8,sjis
 "shellコマンドの文字化けを防ぐ
 "set termencoding=cp932
-"Keep the current directory and the browsing directory synced. 
-"control charcter
+"CONTROL CHARCTER
 "trail：行末のスペースを表示
 set listchars=tab:»-,trail:-,nbsp:%,eol:↲
+"no Attention with Swap file
+set shortmess+=A
 "foldを使う
 set foldenable
 "貼り付け用
 "set paste
-"Ex
+"EX,NTREE
+"Keep the current directory and the browsing directory synced. 
 let g:netrw_keepdir = 0
 let g:netrw_liststyle = 2
 "fuzzy search
@@ -73,6 +74,11 @@ nnoremap <leader>et :vsplit /mnt/h/マイドライブ/G_Private/terms.md<cr>
 nnoremap <leader>eg :e /mnt/h/マイドライブ/G_Webdev/Documents/Learn_Git.md<cr>
 "Quick MyDocker_note
 nnoremap <leader>ed :e /mnt/h/マイドライブ/G_Webdev/G_Docker/Docker_terms.md<cr>
+"Quick Todolist
+nnoremap <leader>el :e /mnt/h/マイドライブ/G_Private/todolist.md<cr>
+
+"increse numbers
+nnoremap <c-f> <c-a>
 
 "EDIT MAP=================================================
 "Join selected lines then delete a space
@@ -80,8 +86,6 @@ nnoremap <leader>ed :e /mnt/h/マイドライブ/G_Webdev/G_Docker/Docker_terms.
 vnoremap <S-j> J :s/\s//g<cr><esc>
 "アルファベット用
 vnoremap <c-j> J<esc> 
-"g <C-a> increment numbers
-vnoremap g<c-f> g<c-a> 
 "dd with <c-s>
 nnoremap <c-s> dd
 "insert newline
@@ -132,20 +136,20 @@ vnoremap <leader>v" <esc>`<<esc>i"<esc>`>ea"<esc>l
 vnoremap <leader>v' <esc>`<<esc>i'<esc>`>ea'<esc>l
 vnoremap <leader>v[ <esc>`<<esc>i[<esc>`>ea]<esc>l
 vnoremap <leader>v( <esc>`<<esc>i(<esc>`>ea)<esc>l
-
 "H,L as strong h,l
 nnoremap H 0
 nnoremap L $
 ":term から抜けてウィンドウ移動
 tnoremap <esc> <C-\><C-n>
-"AUTOCMD================================================= 
+
+"AUTOCMD
 "deletes netrw's buffer once it's hidden
 autocmd FileType netrw setl bufhidden=delete
 autocmd FileType javascript nnoremap <buffer> <localleader>c I//<esc>
 autocmd FileType python     nnoremap <buffer> <localleader>c I#<esc>
 "insert datetime when open freenote
 
-"COLOR====================================================
+"COLOR
 "その他未分類
 syntax on
 set laststatus=2
@@ -209,7 +213,7 @@ call plug#end()
 "ABBR
 "Anchor and Reference
 abbr tick ```
-abbr todo - [ ]
+abbr mytodo - [ ]
 abbr anchor [^n]
 abbr refer [^n]:<cr>
 abbr term ### :<cr>
@@ -239,7 +243,7 @@ abbr m_mermaid ```mermaid<cr>
 "FOLDING 
 "au BufWinLeave * mkview
 "au BufWinEnter * silent loadview
-autocmd BufWinLeave *.* mkview!
+autocmd BufWinLeave *.* mkview
 autocmd BufWinEnter *.* silent loadview
 
 "COLORSCHEME
