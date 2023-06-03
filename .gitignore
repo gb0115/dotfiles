@@ -8,3 +8,7 @@ tmux_plugins/
 .local/
 .config/
 .vim/
+markdown.css
+private_todos.sh
+
+
