@@ -1,0 +1,40 @@
+# Define a function to create a new directory and move into it
+function mkcd() {
+    mkdir -p "$1" && cd "$1"
+}
+
+#pandock from md into html
+
+#For <title>, insert YAML code like below top of markdown 
+
+#---
+#title: My Document Title
+#---
+
+#--no-highlightはcode blockのattributeを省略する?
+
+pandock() {
+    input_file="$1"
+    output_file_html="${input_file%.*}.html"
+    output_file_pdf="${input_file%.*}.pdf"
+    template_file="/root/custom-template.html"  # Replace with the actual path to custom-template.html
+
+    echo "convert $input_file into html"
+
+    docker run --rm -v "$(pwd):/data" -u "$(id -u):$(id -g)" -v "$template_file:$template_file" \
+    pandoc/core -f gfm -t html "$input_file" -o "$output_file_html" --template="$template_file" 
+    }
+
+pandock_pdf() {
+    input_file="$1"
+    output_file="${input_file%.*}.pdf"
+
+    echo "convert $input_file into pdf"
+
+    docker run --rm -v "$(pwd):/data" -u "$(id -u):$(id -g)" \
+    pandoc/latex "$input_file" -o "$output_file"
+}
+
+
+
+

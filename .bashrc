@@ -101,23 +101,34 @@ fi
 ########CUSTOMIZE#####################
 #move to start of command line by Ctrl a
 set -o emacs
-#alias_220817
+
+#Alias
 alias vi='nvim'
 alias vim='nvim'
+alias mkdri='mkdir'
+alias mdkri='mkdir'
 alias ls='ls -ta'
+alias tmux='tmux -u'
+#Windows
 alias Documents='cd /mnt/c/Users/infoh/Documents'
 alias winhome='cd /mnt/c/Users/infoh'
+alias mydocker='cd /mnt/c/Users/infoh/Documents/Program/Docker/' 
+alias myscript='cd /home/infoh/shellscripts/'
+alias mypython='cd /home/infoh/mypython'
+alias myjs='cd /mnt/h/マイドライブ/G_Webdev/G_JS/Stepup_JS'
+#Ubuntu
 alias home='cd /home/infoh'
+#Gdrive alias
 alias readj='less /mnt/h/マイドライブ/G_Private/journal.md'
 alias cdj='vi /mnt/h/マイドライブ/G_Private/journal.txt'
 alias cdjmd='vi /mnt/h/マイドライブ/G_Private/journal.md'
 alias freenote='vi /mnt/h/マイドライブ/G_Private/freenote.md' 
-alias mydocker='cd /mnt/c/Users/infoh/Documents/Program/Docker/' 
-alias myscript='cd /home/infoh/shellscripts/'
-alias pomodoro='vi /mnt/h/マイドライブ/G_Private/pomodoro_count.txt'
-alias mypython='cd /home/infoh/mypython'
 alias todolist='vi /mnt/h/マイドライブ/G_Private/todolist.md'
-#export PS1="\e[1;34m\u\e[1;35m@\e[1;31m\w\e[0m$ " 
+alias portfolio='cd /mnt/h/マイドライブ/G_Reqruit/Portfolio2023'
+alias artthought='vi /mnt/h/マイドライブ/G_Private/Works/art_thought.md'
+alias mental='vi /mnt/h/マイドライブ/G_Private/Mental.md'
+alias current='vi /mnt/h/マイドライブ/G_Webdev/G_WebDesign/G_XD/Documents/moshasyugyo/coding-from-xd'
+
 export PS1="\[\e[1;36m\]\u\[\e[m\]\[\e[1;34m\]@\h\[\e[m\]\[\e[1;35m\]:\w\[\e[m\]\$ "
 
 #mout gdrive in terminal on oldPC
@@ -130,11 +141,20 @@ fi
 export LS_OPTIONS='-a --color=auto'
 eval "$(dircolors -b)"
 alias ls='ls $LS_OPTIONS'
+
 #myscript 
 PATH=/home/infoh/shellscripts:${PATH}
 export PATH
 alias w3mmd="w3mmd.sh"
-alias journal="journal.sh"
+alias jrnl="journal.sh"
 
+#myscript in .functions
+if [ -f "$HOME/.functions" ]; then
+    source "$HOME/.functions"
+fi
 
 export HISTTIMEFORMAT="%F %T "
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

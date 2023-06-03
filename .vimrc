@@ -19,7 +19,7 @@ set shortmess+=A
 "foldを使う
 set foldenable
 "貼り付け用
-"set paste
+:set pastetoggle=<F8>
 "EX,NTREE
 "Keep the current directory and the browsing directory synced. 
 let g:netrw_keepdir = 0
@@ -37,9 +37,9 @@ set wildmode=longest:full,full
 set cmdheight=1
 "tabの数の設定
 set tabstop=2       " The width of a TAB is set to 4.
-                    " Still it is a \t. It is just that
-                    " Vim will interpret it to be having
-                    " a width of 4.
+" Still it is a \t. It is just that
+" Vim will interpret it to be having
+" a width of 4.
 set shiftwidth=2    " Indents will have a width of 4
 set softtabstop=2   " Sets the number of columns for a TAB
 set expandtab       " Expand TABs to spaces
@@ -53,12 +53,24 @@ set scrolljump=4
 set scrolloff=6
 "split at right pane
 set splitright
+"vimdiff colorscheme
+if &diff 
+  colorscheme blue
+  sytax off 
+endif
+"disable ctrl-c in insert mode
+inoremap <C-c> <nop>
+"prevent polyglot from highlighting markdown file
+let g:polyglot_disabled = ['markdown']
+"user ctags 
+"path to tags
+set tags=./tags;,tags;
 
 "MAPPING================================================= 
 "ENV MAP=================================================
 "LEADER
 "<leader> keyを,にする
-let mapleader = '@'
+let mapleader = '\'
 "<localleader> keyを\\にする
 let maplocalleader = '\\'
 "Quick VIMRC
@@ -66,17 +78,38 @@ nnoremap <leader>ev :vsplit /root/.vimrc<cr>
 nnoremap <leader>sv :source /root/.vimrc<cr>
 "Quick MyJournal
 nnoremap <leader>ej :vsplit /mnt/h/マイドライブ/G_Private/journal.md<cr>
+"Quick MyJson
+nnoremap <leader>ejso :vsplit /mnt/h/マイドライブ/G_Unix/Documents/Json.md<cr>
 "Quick MyDict
 nnoremap <leader>ee :vsplit /mnt/h/マイドライブ/G_Private/eng.md<cr><Esc>
 "Quick Myterms
 nnoremap <leader>et :vsplit /mnt/h/マイドライブ/G_Private/terms.md<cr>
+"Quick MyVim_note
+nnoremap <leader>es :vsplit /mnt/h/マイドライブ/G_Unix/Vim/Vim_Commands.md<cr>
+"Quick Sheets_shortcuts
+nnoremap <leader>esh :vsplit /mnt/h/マイドライブ/G_Private/gsheets.md<cr>
+"Quick MyAPI_note
+nnoremap <leader>ea :vsplit /mnt/h/マイドライブ/G_Webdev/Documents/API.md<cr>
 "Quick MyGit_note
-nnoremap <leader>eg :e /mnt/h/マイドライブ/G_Webdev/Documents/Learn_Git.md<cr>
+nnoremap <leader>eg :vsplit /mnt/h/マイドライブ/G_Webdev/Documents/Learn_Git.md<cr>
+"Quick Mental
+nnoremap <leader>em :vsplit /mnt/h/マイドライブ/G_Private/Mental.md<cr>
 "Quick MyDocker_note
-nnoremap <leader>ed :e /mnt/h/マイドライブ/G_Webdev/G_Docker/Docker_terms.md<cr>
+nnoremap <leader>ed :vsplit /mnt/h/マイドライブ/G_Webdev/G_Docker/Docker_terms.md<cr>
 "Quick Todolist
-nnoremap <leader>el :e /mnt/h/マイドライブ/G_Private/todolist.md<cr>
-
+nnoremap <leader>el :vsplit /mnt/h/マイドライブ/G_Private/todolist.md<cr>
+"Quick Payment
+nnoremap <leader>ep :vsplit /mnt/h/マイドライブ/G_Private/payment.md<cr>
+"Quick Todolist
+nnoremap <leader>eto :vsplit /mnt/h/マイドライブ/G_Private/todolist.md<cr>
+"Quick Pomodoro
+nnoremap <leader>epo :vsplit /mnt/h/マイドライブ/G_Private/pomodoro_count.txt<cr>
+"Quick journal
+nnoremap <leader>eja :vsplit /mnt/h/マイドライブ/G_Private/journal.md<cr>
+"Quick javascript
+nnoremap <leader>ejs :vsplit /mnt/h/マイドライブ/G_Webdev/G_JS/Documents/javascript.md<cr>
+nnoremap <leader>exd :vsplit /mnt/h/マイドライブ/G_Webdev/G_WebDesign/G_XD/Documents/XD_memo.md<cr>
+nnoremap <leader>ecss :vsplit /mnt/h/マイドライブ/G_Webdev/G_WebDesign/G_CSS/Documents/CSS_memo.md<cr>
 "increse numbers
 nnoremap <c-f> <c-a>
 
@@ -122,20 +155,48 @@ nnoremap <leader><F3> :set rnu! <CR>
 inoremap <F3> <esc>:set nu! <CR>i
 "Map F4 to toggle on and off the Relative line numbers in Insert mode
 inoremap <F4> <esc>:set rnu! <CR>i
-"Surround
-"quote with "
-"by word
+"Auto Close Tags
+"Programming
+inoremap " ""<left>
+inoremap ' ''<left>
+"inoremap ( ()<esc>i
+inoremap [ []<esc>i
+""inoremap { {<esc><cr>}<esc>ka<space><space>
+inoremap fnc function () {<esc>o<cr>}<esc>kkwi
+inoremap dcm document<esc>
+inoremap gEI getElementById('');<esc>2hi
+inoremap gEC getElementsByClassName('');<esc>2hi
+inoremap aEL addEventListener('',()=> {});<esc>7hi
+inoremap qS querySelector('');<esc>2hi
+inoremap qSA querySelectorAll('');<esc>2hi
+inoremap cso console.log();<esc>1hi
+inoremap foof for( of ){<cr>};<esc>1k3li<space>
+inoremap foin for( in ){<cr>};<esc>1k3li<space>
+inoremap tick ```<cr><cr>```<esc>ki
+inoremap mytodo - [ ]<space>
+inoremap mlnk []()<esc>2hi
+"finish
+nnoremap FNS gg=G g,
+
+"QUOTE 
+"quote word
 nnoremap <leader>" viw<esc>bi"<esc>ea"<esc>l
 nnoremap <leader>' viw<esc>bi'<esc>ea'<esc>l
-"by clause
-nnoremap <leader>c" _vg_<esc>`<<esc>i"<esc>`>ea"<esc>l
-nnoremap <leader>c" _vg_<esc>`<<esc>i"<esc>`>ea"<esc>l
-nnoremap <leader>c[ _vg_<esc>`<<esc>i[<esc>`>ea]<esc>l
-nnoremap <leader>c( _vg_<esc>`<<esc>i(<esc>`>ea)<esc>l
-vnoremap <leader>v" <esc>`<<esc>i"<esc>`>ea"<esc>l
-vnoremap <leader>v' <esc>`<<esc>i'<esc>`>ea'<esc>l
-vnoremap <leader>v[ <esc>`<<esc>i[<esc>`>ea]<esc>l
-vnoremap <leader>v( <esc>`<<esc>i(<esc>`>ea)<esc>l
+"quote with clause
+nnoremap <leader>c" _vg_<esc>`<<esc>i"<esc>`>A"<esc>l
+nnoremap <leader>c' _vg_<esc>`<<esc>i'<esc>`>A'<esc>l
+nnoremap <leader>c` _vg_<esc>`<<esc>i`<esc>`>A`<esc>l
+nnoremap <leader>c[ _vg_<esc>`<<esc>i[<esc>`>A]<esc>l
+nnoremap <leader>c( _vg_<esc>`<<esc>i(<esc>`>A)<esc>l
+vnoremap <leader>v" <esc>`<<esc>i"<esc>`>A"<esc>l
+vnoremap <leader>v' <esc>`<<esc>i'<esc>`>A'<esc>l
+vnoremap <leader>v[ <esc>`<<esc>i[<esc>`>A]<esc>l
+vnoremap <leader>v( <esc>`<<esc>i(<esc>`>A)<esc>l
+vnoremap <leader>v``` <esc>`<<esc>ki```<esc>`><cr>i```<esc>`<kA
+"COMMENTS
+"htmlのコメント autocmdでは2char前に閉じてしまうエラーが出るので。
+vnoremap <leader>vh <esc>`<<esc>i<!--<esc>`>A--><esc>l
+vnoremap <leader>vc <esc>`<<esc>i/*<esc>`>A*/<esc>l
 "H,L as strong h,l
 nnoremap H 0
 nnoremap L $
@@ -145,9 +206,10 @@ tnoremap <esc> <C-\><C-n>
 "AUTOCMD
 "deletes netrw's buffer once it's hidden
 autocmd FileType netrw setl bufhidden=delete
-autocmd FileType javascript nnoremap <buffer> <localleader>c I//<esc>
-autocmd FileType python     nnoremap <buffer> <localleader>c I#<esc>
-"insert datetime when open freenote
+"COMMENTS
+"By filetype
+autocmd FileType javascript nnoremap <localleader>c I//<esc>
+autocmd FileType python nnoremap <localleader>c I#<esc>
 
 "COLOR
 "その他未分類
@@ -175,29 +237,31 @@ let g:mkdp_theme='light'
 
 "PLUGINS
 "For emmet
-let g:user_emmet_expandabbr_key='<tab>'
+let g:user_emmet_expandabbr_key='\'
 let g:user_emmet_settings = {
-\  'variables' : {
-\    'lang': "ja",
-\    'charset': "utf-8",
-\    'child': "Document",
-\  },
-\  'html' : {
-\    'indentation' : '  ',
-\    'snippets' : {
-\      'html:5': "<!DOCTYPE html>\n"
-\        ."<html lang=\"${lang}\">\n"
-\        ."<head>\n"
-\        ."\t<meta charset=\"${charset}\">\n"
-\        ."\t<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n"
-\        ."\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n"
-\        ."\t<title></title>\n"
-\        ."</head>\n"
-\        ."<body>\n\t${child}|\n</body>\n"
-\        ."</html>"
-\    }
-\  }
-\}
+      \  'variables' : {
+      \    'lang': "ja",
+      \    'charset': "utf-8",
+      \    'child': "Document",
+      \  },
+      \  'html' : {
+      \    'indentation' : '  ',
+      \    'snippets' : {
+      \      'html:5': "<!DOCTYPE html>\n"
+      \        ."<html lang=\"${lang}\">\n"
+      \        ."<head>\n"
+      \        ."\t<meta charset=\"${charset}\">\n"
+      \        ."\t<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n"
+      \        ."\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n"
+      \        ."\t<title></title>\n"
+      \        ."</head>\n"
+      \        ."<body>\n\t${child}|\n</body>\n"
+      \        ."</html>"
+      \    }
+      \  }
+         \}
+let g:user_emmet_install_global = 0
+autocmd FileType html,css,vue,jsx,php,js,scss EmmetInstall
 
 call plug#begin()
 Plug 'vim-airline/vim-airline'
@@ -207,44 +271,69 @@ Plug 'NLKNguyen/papercolor-theme'
 Plug 'junegunn/vim-easy-align'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 Plug 'tpope/vim-surround'
-Plug 'mattn/emmet-vim',{'for':'html'}
+"Plug 'mattn/emmet-vim',{'for':'html'}
+Plug 'mattn/emmet-vim'
+Plug 'sheerun/vim-polyglot'
 call plug#end()
+
 
 "ABBR
 "Anchor and Reference
-abbr tick ```
-abbr mytodo - [ ]
-abbr anchor [^n]
-abbr refer [^n]:<cr>
-abbr term ### :<cr>
-abbr word ### :<cr>
-abbr pds - Plan:<cr>
-\- Do:<cr>
-\- See:<cr>
+"Writing
+abbr dct {"":""}<esc>
+abbr rfr [^n]:<esc>
+abbr trm ### :<esc>
+abbr wrd ### :<esc>
+abbr pds - Plan :<cr>
+      \- Do :<cr>
+      \- See :<cr>
 abbr timestamp 00:00
+""abbr gEI getElementById('');<esc>2hi
+""abbr gECN getElementsByClassName('');<esc>2hi
+""abbr gBCR getBoundingClientRect()<esc>
+""abbr aEL addEventListener('',()=> {});<esc>7hi
+abbr cmt /**/
+abbr hcmt <!---->
 
 abbr m_mermaid ```mermaid<cr>
-\flowchart LR;<cr>
-\<cr>
-\就活 --> Coding<cr>
-\<cr>
-\subgraph ポートフォーリオ<cr>
-\Coding-->Sassの教科書-->Portfolio<cr>
-\end<cr>
-\<cr>
-\subgraph 汎用知識<cr>
-\Git-->Get_vim_colortheme<cr>
-\Git-->Sync_vimrc<cr>
-\end<cr>
-\<cr>
-\Get_vim_colortheme-->アプリ-->Portfolio<cr>
-\Sync_vimrc-->アプリ<cr>
-\```
-"FOLDING 
-"au BufWinLeave * mkview
-"au BufWinEnter * silent loadview
-autocmd BufWinLeave *.* mkview
+      \%%{init: {'theme': 'neutral'} }%%  
+      \flowchart LR;<cr>
+      \<cr>
+      \就活 --> Coding<cr>
+      \<cr>
+      \subgraph ポートフォーリオ<cr>
+      \Coding-->Sassの教科書-->Portfolio<cr>
+      \end<cr>
+      \<cr>
+      \subgraph 汎用知識<cr>
+      \Git-->Get_vim_colortheme<cr>
+      \Git-->Sync_vimrc<cr>
+      \end<cr>
+      \<cr>
+      \Get_vim_colortheme-->アプリ-->Portfolio<cr>
+      \Sync_vimrc-->アプリ<cr>
+      \A["host file (empty in default)"] -->B["DNS cache or DNS server"];<cr>
+      \```
+
+"autocmd
+"save temp file
+"autocmd BufNewFile * :w
+autocmd BufWinLeave *.* mkview 
 autocmd BufWinEnter *.* silent loadview
+""autocmd BufWritePre *.* :normal gg=G g,
+"
+"function! QuitVim()
+"  nnoremap <buffer> <Enter> <esc>ggvG$=<enter>:w
+"  mkview
+"endfunction
+"
+"autocmd BufWinLeave *.* call QuitVim() 
+"
+"function! OpenVim()
+"  silent loadview
+"endfunction
+"
+"autocmd BufWinEnter *.* call OpenVim() 
 
 "COLORSCHEME
 "colorscheme dracula
@@ -255,4 +344,6 @@ set background=light
 let g:mkdp_markdown_css='/root/markdown.css'
 let g:mkdp_theme='light'
 let vim_markdown_preview_github=1  
+" syntax highlight by filetype 
+let g:markdown_fenced_languages = ['coffee', 'css', 'erb=eruby', 'javascript', 'js=javascript', 'json=javascript', 'ruby', 'sass', 'scss', 'xml', 'html', 'css', 'php']
 
