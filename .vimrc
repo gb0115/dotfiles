@@ -28,8 +28,8 @@ let g:netrw_liststyle = 2
 set nocompatible "limit search to your project
 set path+=** "Search All subdirectories and recursively
 "wildmenu
-set wildmenu
 set wildmode=longest:full,full
+set wildmenu
 "clipboard option causes error https://stackoverflow.com/questions/70176024/how-to-efficiently-yank-to-system-clipboard-in-wsl2-neovim
 "cuiのnvimで行崩れが起こるのでwindow幅設定
 "set lines=24 columns=84
@@ -74,8 +74,8 @@ let mapleader = '\'
 "<localleader> keyを\\にする
 let maplocalleader = '\\'
 "Quick VIMRC
-nnoremap <leader>ev :vsplit /root/.vimrc<cr>
-nnoremap <leader>sv :source /root/.vimrc<cr>
+nnoremap <leader>ev :vsplit ~/.vimrc<cr>
+nnoremap <leader>sv :source ~/.vimrc<cr>
 "Quick MyJournal
 nnoremap <leader>ej :vsplit /mnt/h/マイドライブ/G_Private/journal.md<cr>
 "Quick MyJson
@@ -111,7 +111,7 @@ nnoremap <leader>ejs :vsplit /mnt/h/マイドライブ/G_Webdev/G_JS/Documents/j
 nnoremap <leader>exd :vsplit /mnt/h/マイドライブ/G_Webdev/G_WebDesign/G_XD/Documents/XD_memo.md<cr>
 nnoremap <leader>ecss :vsplit /mnt/h/マイドライブ/G_Webdev/G_WebDesign/G_CSS/Documents/CSS_memo.md<cr>
 "increse numbers
-nnoremap <c-f> <c-a>
+nnoremap <c-f>
 
 "EDIT MAP=================================================
 "Join selected lines then delete a space
@@ -159,8 +159,9 @@ inoremap <F4> <esc>:set rnu! <CR>i
 "Programming
 inoremap " ""<left>
 inoremap ' ''<left>
-"inoremap ( ()<esc>i
+inoremap ( ()<esc>i
 inoremap [ []<esc>i
+inoremap { {}<esc>i
 ""inoremap { {<esc><cr>}<esc>ka<space><space>
 inoremap fnc function () {<esc>o<cr>}<esc>kkwi
 inoremap dcm document<esc>
@@ -173,10 +174,16 @@ inoremap cso console.log();<esc>1hi
 inoremap foof for( of ){<cr>};<esc>1k3li<space>
 inoremap foin for( in ){<cr>};<esc>1k3li<space>
 inoremap tick ```<cr><cr>```<esc>ki
+inoremap h1 #<space>
+inoremap h2 ##<space>
+inoremap h3 ###<space>
+inoremap h4 ####<space>
 inoremap mytodo - [ ]<space>
-inoremap mlnk []()<esc>2hi
+inoremap mylink []()<esc>2hi
 "finish
 nnoremap FNS gg=G g,
+"Notion Logical Physical
+inoremap start - Notion  ( やりたいこと) :  <CR>- Logic  ( 手法、道具 ) :  <CR>- Physic  ( 道具に即した実装 ) :  <esc>
 
 "QUOTE 
 "quote word
@@ -192,6 +199,10 @@ vnoremap <leader>v" <esc>`<<esc>i"<esc>`>A"<esc>l
 vnoremap <leader>v' <esc>`<<esc>i'<esc>`>A'<esc>l
 vnoremap <leader>v[ <esc>`<<esc>i[<esc>`>A]<esc>l
 vnoremap <leader>v( <esc>`<<esc>i(<esc>`>A)<esc>l
+"strike in markdown"
+vnoremap <leader>v~~ <esc>`<<esc>i~~<esc>`>A~~<esc>l
+"bold in markdown"
+vnoremap <leader>v** <esc>`<<esc>i**<esc>`>A**<esc>l
 vnoremap <leader>v``` <esc>`<<esc>ki```<esc>`><cr>i```<esc>`<kA
 "COMMENTS
 "htmlのコメント autocmdでは2char前に閉じてしまうエラーが出るので。

@@ -17,13 +17,35 @@ pandock() {
     input_file="$1"
     output_file_html="${input_file%.*}.html"
     output_file_pdf="${input_file%.*}.pdf"
-    template_file="/root/custom-template.html"  # Replace with the actual path to custom-template.html
+    template_file="/home/infoh/custom-template.html"  # Replace with the actual path to custom-template.html
 
-    echo "convert $input_file into html"
+    echo "convert $input_file into htmlxxx"
 
     docker run --rm -v "$(pwd):/data" -u "$(id -u):$(id -g)" -v "$template_file:$template_file" \
     pandoc/core -f gfm -t html "$input_file" -o "$output_file_html" --template="$template_file" 
     }
+
+pandock_toc() {
+    input_file="$1"
+    output_file_html="${input_file%.*}.html.toc"
+
+    echo "creating toc"
+
+    docker run --rm -v "$(pwd):/data" -u "$(id -u):$(id -g)" -v "$template_file:$template_file" \
+    pandoc/core --standalone -f gfm -t html "$input_file" -o "$output_file_html" --toc
+    }
+
+pandock_tocc() {
+    input_file="$1"
+    output_file_html="${input_file%.*}.html.toc2"
+
+    echo "creating toc"
+
+    docker run --rm -v "$(pwd):/data" -u "$(id -u):$(id -g)" -v "$template_file:$template_file" \
+    pandoc/core -f gfm -t html "$input_file" -o "$output_file_html"
+    }
+
+
 
 pandock_pdf() {
     input_file="$1"
@@ -35,6 +57,27 @@ pandock_pdf() {
     pandoc/latex "$input_file" -o "$output_file"
 }
 
+send_ntfy() {
+    message="$1"
+    curl -d "$1" ntfy.sh/pracAPI
+}
+myntfy() {
+    echo "title:"
+        read title
+        echo "message:"
+        read message
+        function ntfy(){
+            curl -H "X-Title: $title" -d "$message" ntfy.sh/pracAPI
+        }
+    ntfy "$1"
+}
 
 
+#mout gdrive in terminal on oldPC
+moung() {
+if [ $HOSTNAME = "DESKTOP-98DKBEG" ]; then
+	sudo mount -t drvfs H: /mnt/h
+	alias gdrive='cd /mnt/h/マイドライブ/'
+fi
+}
 

@@ -109,6 +109,7 @@ alias mkdri='mkdir'
 alias mdkri='mkdir'
 alias ls='ls -ta'
 alias tmux='tmux -u'
+alias dup='cd ../'
 #Windows
 alias Documents='cd /mnt/c/Users/infoh/Documents'
 alias winhome='cd /mnt/c/Users/infoh'
@@ -119,6 +120,7 @@ alias myjs='cd /mnt/h/マイドライブ/G_Webdev/G_JS/Stepup_JS'
 #Ubuntu
 alias home='cd /home/infoh'
 #Gdrive alias
+alias gdrive='cd /mnt/h/マイドライブ/'
 alias readj='less /mnt/h/マイドライブ/G_Private/journal.md'
 alias cdj='vi /mnt/h/マイドライブ/G_Private/journal.txt'
 alias cdjmd='vi /mnt/h/マイドライブ/G_Private/journal.md'
@@ -131,11 +133,11 @@ alias current='vi /mnt/h/マイドライブ/G_Webdev/G_WebDesign/G_XD/Documents/
 
 export PS1="\[\e[1;36m\]\u\[\e[m\]\[\e[1;34m\]@\h\[\e[m\]\[\e[1;35m\]:\w\[\e[m\]\$ "
 
-#mout gdrive in terminal on oldPC
-if [ $HOSTNAME = "DESKTOP-98DKBEG" ]; then
-	sudo mount -t drvfs H: /mnt/h
-	alias gdrive='cd /mnt/h/マイドライブ/'
-fi
+##mout gdrive in terminal on oldPC
+#if [ $HOSTNAME = "DESKTOP-98DKBEG" ]; then
+#	sudo mount -t drvfs H: /mnt/h
+#	alias gdrive='cd /mnt/h/マイドライブ/'
+#fi
 
 #color_221115
 export LS_OPTIONS='-a --color=auto'
@@ -147,6 +149,7 @@ PATH=/home/infoh/shellscripts:${PATH}
 export PATH
 alias w3mmd="w3mmd.sh"
 alias jrnl="journal.sh"
+alias pomo="countdown_pomodoro.sh"
 
 #myscript in .functions
 if [ -f "$HOME/.functions" ]; then
