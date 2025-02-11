@@ -121,6 +121,7 @@ alias myjs='cd /mnt/h/マイドライブ/G_Webdev/G_JS/Stepup_JS'
 alias home='cd /home/infoh'
 #Gdrive alias
 alias gdrive='cd /mnt/h/マイドライブ/'
+alias book='cd /mnt/h/マイドライブ/G_Books/'
 alias readj='less /mnt/h/マイドライブ/G_Private/journal.md'
 alias cdj='vi /mnt/h/マイドライブ/G_Private/journal.txt'
 alias cdjmd='vi /mnt/h/マイドライブ/G_Private/journal.md'
@@ -130,6 +131,7 @@ alias portfolio='cd /mnt/h/マイドライブ/G_Reqruit/Portfolio2023'
 alias artthought='vi /mnt/h/マイドライブ/G_Private/Works/art_thought.md'
 alias mental='vi /mnt/h/マイドライブ/G_Private/Mental.md'
 alias current='vi /mnt/h/マイドライブ/G_Webdev/G_WebDesign/G_XD/Documents/moshasyugyo/coding-from-xd'
+alias timee='vi /mnt/h/マイドライブ/G_Life/G_Finance/timee.csv'
 
 export PS1="\[\e[1;36m\]\u\[\e[m\]\[\e[1;34m\]@\h\[\e[m\]\[\e[1;35m\]:\w\[\e[m\]\$ "
 
@@ -149,7 +151,10 @@ PATH=/home/infoh/shellscripts:${PATH}
 export PATH
 alias w3mmd="w3mmd.sh"
 alias jrnl="journal.sh"
+alias today="today.sh"
 alias pomo="countdown_pomodoro.sh"
+alias mw='mw.sh'
+alias thesaurus='thesaurus.sh'
 
 #myscript in .functions
 if [ -f "$HOME/.functions" ]; then
@@ -161,3 +166,12 @@ export HISTTIMEFORMAT="%F %T "
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# SSHエージェントを自動起動 20241117
+if [ -z "$SSH_AUTH_SOCK" ]; then
+    # エージェントを起動
+    eval "$(ssh-agent -s)"
+    # エージェントにキーを追加する（パスフレーズが不要になる。）
+    ssh-add ~/.ssh/id_ed25519
+fi
+

@@ -108,6 +108,8 @@ nnoremap <leader>epo :vsplit /mnt/h/マイドライブ/G_Private/pomodoro_count.
 nnoremap <leader>eja :vsplit /mnt/h/マイドライブ/G_Private/journal.md<cr>
 "Quick javascript
 nnoremap <leader>ejs :vsplit /mnt/h/マイドライブ/G_Webdev/G_JS/Documents/javascript.md<cr>
+"Quick PHP
+nnoremap <leader>ephp :vsplit /mnt/h/マイドライブ/G_Webdev/G_PHP/Documents/PHP.md<cr>
 nnoremap <leader>exd :vsplit /mnt/h/マイドライブ/G_Webdev/G_WebDesign/G_XD/Documents/XD_memo.md<cr>
 nnoremap <leader>ecss :vsplit /mnt/h/マイドライブ/G_Webdev/G_WebDesign/G_CSS/Documents/CSS_memo.md<cr>
 "increse numbers
@@ -159,10 +161,18 @@ inoremap <F4> <esc>:set rnu! <CR>i
 "Programming
 inoremap " ""<left>
 inoremap ' ''<left>
-inoremap ( ()<esc>i
+"inoremap ( ()<esc>i
 inoremap [ []<esc>i
 inoremap { {}<esc>i
-""inoremap { {<esc><cr>}<esc>ka<space><space>
+"inoremap { {<esc><cr>}<esc>ka<space><space>
+"nnoremap " ""<left>
+"nnoremap ' ''<left>
+"nnoremap ( ()<esc>i
+"nnoremap [ []<esc>i
+"nnoremap { {}<esc>i
+"nnoremap { {<esc><cr>}<esc>ka<space><space>
+
+
 inoremap fnc function () {<esc>o<cr>}<esc>kkwi
 inoremap dcm document<esc>
 inoremap gEI getElementById('');<esc>2hi
@@ -183,26 +193,29 @@ inoremap mylink []()<esc>2hi
 "finish
 nnoremap FNS gg=G g,
 "Notion Logical Physical
-inoremap start - Notion  ( やりたいこと) :  <CR>- Logic  ( 手法、道具 ) :  <CR>- Physic  ( 道具に即した実装 ) :  <esc>
+"inoremap start - Notion  ( やりたいこと) :  <CR>- Logic  ( 手法、道具 ) :  <CR>- Physic  ( 道具に即した実装 ) :  <esc>
 
 "QUOTE 
 "quote word
 nnoremap <leader>" viw<esc>bi"<esc>ea"<esc>l
 nnoremap <leader>' viw<esc>bi'<esc>ea'<esc>l
+nnoremap <leader>** viw<esc>bi**<esc>ea**<esc>l
+nnoremap <leader>( viw<esc>bi(<esc>ea)<esc>l
 "quote with clause
-nnoremap <leader>c" _vg_<esc>`<<esc>i"<esc>`>A"<esc>l
-nnoremap <leader>c' _vg_<esc>`<<esc>i'<esc>`>A'<esc>l
-nnoremap <leader>c` _vg_<esc>`<<esc>i`<esc>`>A`<esc>l
-nnoremap <leader>c[ _vg_<esc>`<<esc>i[<esc>`>A]<esc>l
-nnoremap <leader>c( _vg_<esc>`<<esc>i(<esc>`>A)<esc>l
-vnoremap <leader>v" <esc>`<<esc>i"<esc>`>A"<esc>l
-vnoremap <leader>v' <esc>`<<esc>i'<esc>`>A'<esc>l
-vnoremap <leader>v[ <esc>`<<esc>i[<esc>`>A]<esc>l
-vnoremap <leader>v( <esc>`<<esc>i(<esc>`>A)<esc>l
+nnoremap <leader>c" _vg_<esc>`<<esc>i"<esc>`>a"<esc>l
+nnoremap <leader>c' _vg_<esc>`<<esc>i'<esc>`>a'<esc>l
+nnoremap <leader>c` _vg_<esc>`<<esc>i`<esc>`>a`<esc>l
+nnoremap <leader>c[ _vg_<esc>`<<esc>i[<esc>`>a]<esc>l
+nnoremap <leader>c( _vg_<esc>`<<esc>i(<esc>`>a)<esc>l
+"clause vnore
+vnoremap <leader>v" l<esc>`<<esc>i"<esc>`>a"<esc>l
+vnoremap <leader>v** l<esc>`<<esc>i**<esc>`>a**<esc>l
+vnoremap <leader>v' l<esc>`<<esc>i'<esc>`>a'<esc>l
+vnoremap <leader>v[ l<esc>`<<esc>i[<esc>`>a]<esc>l
+vnoremap <leader>v( l<esc>`<<esc>i(<esc>`>a)<esc>l
 "strike in markdown"
-vnoremap <leader>v~~ <esc>`<<esc>i~~<esc>`>A~~<esc>l
+vnoremap <leader>v~~ <esc>`<<esc>i~~<esc>`>a~~<esc>l
 "bold in markdown"
-vnoremap <leader>v** <esc>`<<esc>i**<esc>`>A**<esc>l
 vnoremap <leader>v``` <esc>`<<esc>ki```<esc>`><cr>i```<esc>`<kA
 "COMMENTS
 "htmlのコメント autocmdでは2char前に閉じてしまうエラーが出るので。
@@ -215,6 +228,13 @@ nnoremap L $
 tnoremap <esc> <C-\><C-n>
 
 "AUTOCMD
+" スマートな折りたたみ設定
+autocmd FileType json setlocal foldmethod=syntax
+" JSONファイルのシンタックスハイライト
+autocmd FileType json syntax enable
+" JSONファイル用のインデント設定
+autocmd FileType json setlocal ts=2 sts=2 sw=2 expandtab
+
 "deletes netrw's buffer once it's hidden
 autocmd FileType netrw setl bufhidden=delete
 "COMMENTS
@@ -285,10 +305,11 @@ Plug 'tpope/vim-surround'
 "Plug 'mattn/emmet-vim',{'for':'html'}
 Plug 'mattn/emmet-vim'
 Plug 'sheerun/vim-polyglot'
+"Plug 'nvim-lua/plenary.nvim'
 call plug#end()
 
 
-"ABBR
+"ABBRh
 "Anchor and Reference
 "Writing
 abbr dct {"":""}<esc>
@@ -344,7 +365,7 @@ autocmd BufWinEnter *.* silent loadview
 "  silent loadview
 "endfunction
 "
-"autocmd BufWinEnter *.* call OpenVim() 
+autocmd BufWinEnter *.* call OpenVim() 
 
 "COLORSCHEME
 "colorscheme dracula
@@ -356,5 +377,5 @@ let g:mkdp_markdown_css='/root/markdown.css'
 let g:mkdp_theme='light'
 let vim_markdown_preview_github=1  
 " syntax highlight by filetype 
-let g:markdown_fenced_languages = ['coffee', 'css', 'erb=eruby', 'javascript', 'js=javascript', 'json=javascript', 'ruby', 'sass', 'scss', 'xml', 'html', 'css', 'php']
+let g:markdown_fenced_languages = ['coffee', 'css', 'python', 'erb=eruby', 'javascript', 'js=javascript', 'json=javascript', 'ruby', 'sass', 'scss', 'xml', 'html', 'css', 'php', 'shell', 'bash', 'sh', 'md', 'markdown', 'latex']
 
